@@ -22,18 +22,19 @@ function Button() {
         setMouseDown(false);
     }
 
-    const buttonStyle = {
-        border: mouseDown ? 'thick double maroon' : 'thick double slateblue',
-    }
-
-    const numStyle = {
-        transition: 'color 0.5s ease',
-        color: mouseDown ? 'red' : 'black',
+    let buttonStyle, numStyle;
+    
+    if (mouseDown) {
+        buttonStyle = {border: 'thick double maroon'};
+        numStyle = 'num-style num-style-clicked';
+    } else {
+        buttonStyle = {border: 'thick double slateblue'};
+        numStyle = 'num-style';
     }
 
     return (
         <button id="button" className="box" style={buttonStyle} onMouseDown={click} onMouseUp={unclick}>
-            <h1>Hi: <span style={numStyle}>{index}</span></h1>
+            <h1>Hi: <span className={numStyle}>{index}</span></h1>
         </button>
     );
 }

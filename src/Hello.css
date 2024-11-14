@@ -27,3 +27,11 @@ p, div, span, label, input, button, h1 {
 #button {
     border: thick double maroon;
 }
+
+.num-style {
+    transition: color 0.5s ease;
+}
+
+.num-style-clicked {
+    color: red;
+}
