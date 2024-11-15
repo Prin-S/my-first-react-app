@@ -43,6 +43,14 @@ function Button({ text = 'Count' }) {
     );
 }
 
+function Wrapper({ children }) {
+    return (
+        <div className="box">
+            {children}
+        </div>
+    );
+}
+
 function Container() {
     return (
         <div id="container">
@@ -51,6 +59,11 @@ function Container() {
             <Hello text="Dog" icon="🐶"/>
             <Button />
             <Button text="hi"/>
+            <Wrapper>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </Wrapper>
         </div>
     );
 }
