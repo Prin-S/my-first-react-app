@@ -1,15 +1,19 @@
 import { useState } from 'react'
 import './Hello.css';
 
-function Hello() {
+function Hello({ text = 'World', icon = '🌏', color = 'blue' }) {
+    const textStyle = {
+        color: color
+    };
+
     return (
         <div className="box">
-            <h1>Hello World!</h1>
+            <h1 style={textStyle}>Hello {text}! {icon}</h1>
         </div>
     );
 }
 
-function Button() {
+function Button({ text = 'Count' }) {
     const [index, setIndex] = useState(0);
     const [mouseDown, setMouseDown] = useState(false);
 
@@ -34,7 +38,7 @@ function Button() {
 
     return (
         <button id="button" className="box" style={buttonStyle} onMouseDown={click} onMouseUp={unclick}>
-            <h1>Hi: <span className={numStyle}>{index}</span></h1>
+            <h1>{text}: <span className={numStyle}>{index}</span></h1>
         </button>
     );
 }
@@ -43,9 +47,10 @@ function Container() {
     return (
         <div id="container">
             <Hello />
-            <Hello />
-            <Hello />
+            <Hello text="Earth" icon="🌎" color="green"/>
+            <Hello text="Dog" icon="🐶"/>
             <Button />
+            <Button text="hi"/>
         </div>
     );
 }
