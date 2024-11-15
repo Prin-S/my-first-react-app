@@ -26,14 +26,12 @@ function Button({ text = 'Count' }) {
         setMouseDown(false);
     }
 
-    let buttonStyle, numStyle;
+    let buttonStyle = {border: 'thick double slateblue'};
+    let numStyle = 'num-style';
     
     if (mouseDown) {
         buttonStyle = {border: 'thick double maroon'};
         numStyle = 'num-style num-style-clicked';
-    } else {
-        buttonStyle = {border: 'thick double slateblue'};
-        numStyle = 'num-style';
     }
 
     return (
