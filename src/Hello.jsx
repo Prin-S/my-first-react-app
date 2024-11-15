@@ -13,7 +13,7 @@ function Hello({ text = 'World', icon = '🌏', color = 'blue' }) {
     );
 }
 
-function Button({ text = 'Count' }) {
+function Button({ text = 'Count', bgColor = 'lightcyan' }) {
     const [index, setIndex] = useState(0);
     const [mouseDown, setMouseDown] = useState(false);
 
@@ -28,10 +28,12 @@ function Button({ text = 'Count' }) {
 
     let buttonStyle = {border: 'thick double slateblue'};
     let numStyle = 'num-style';
+    document.body.style.backgroundColor = 'white';
     
     if (mouseDown) {
         buttonStyle = {border: 'thick double maroon'};
         numStyle = 'num-style num-style-clicked';
+        document.body.style.backgroundColor = bgColor;
     }
 
     return (
@@ -53,10 +55,10 @@ function Container() {
     return (
         <div id="container">
             <Hello />
-            <Hello text="Earth" icon="🌎" color="green"/>
-            <Hello text="Dog" icon="🐶"/>
+            <Hello text="Earth" icon="🌎" color="green" />
+            <Hello text="Dog" icon="🐶" />
             <Button />
-            <Button text="hi"/>
+            <Button text="hi" bgColor="darkseagreen" />
             <Wrapper>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
