@@ -9,7 +9,7 @@ p, div, span, label, input, button, h1 {
     font-weight: 400;
 }
 
-#container {
+.container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: minmax(50px, auto);
@@ -20,6 +20,12 @@ p, div, span, label, input, button, h1 {
     margin-right: auto;
 }
 
+.wrap-around {
+    padding: 10px;
+    border: dashed mediumspringgreen;
+    border-radius: 10px;
+}
+
 .box {
     background-color: snow;
     border: thick double slateblue;
@@ -28,8 +34,19 @@ p, div, span, label, input, button, h1 {
     text-align: center;
 }
 
-#button {
-    border: thick double maroon;
+.box-selected {
+    background-color: powderblue;
+    border: thick double teal;
+}
+
+.button {
+    border: thick double chocolate;
+}
+
+.button:hover {
+    background-color: lightsalmon;
+    border: thick double sienna;
+    transition: background-color 0.5s ease;
 }
 
 .num-style {

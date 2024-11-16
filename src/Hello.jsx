@@ -26,7 +26,7 @@ function Button({ text = 'Count', bgColor = 'lightcyan' }) {
         setMouseDown(false);
     }
 
-    let buttonStyle = {border: 'thick double slateblue'};
+    let buttonStyle = {};
     let numStyle = 'num-style';
     document.body.style.backgroundColor = 'white';
     
@@ -37,7 +37,7 @@ function Button({ text = 'Count', bgColor = 'lightcyan' }) {
     }
 
     return (
-        <button id="button" className="box" style={buttonStyle} onMouseDown={click} onMouseUp={unclick}>
+        <button className="box button" style={buttonStyle} onMouseDown={click} onMouseUp={unclick}>
             <h1>{text}: <span className={numStyle}>{index}</span></h1>
         </button>
     );
@@ -53,7 +53,7 @@ function Wrapper({ children }) {
 
 function Container() {
     return (
-        <div id="container">
+        <div className="container">
             <Hello />
             <Hello text="Earth" icon="🌎" color="green" />
             <Hello text="Dog" icon="🐶" />
