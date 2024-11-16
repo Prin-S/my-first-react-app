@@ -20,6 +20,12 @@ p, div, span, label, input, button, h1 {
     margin-right: auto;
 }
 
+@media (max-width: 992px) {
+    h1 {
+        font-size: 6vw;
+    }
+}
+
 .wrap-around {
     padding: 10px;
     border: dashed mediumspringgreen;
